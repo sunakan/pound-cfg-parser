@@ -1,0 +1,10 @@
+---
+version: '3.8'
+services:
+  pound:
+    image: eeacms/pound:2.7
+    working_dir: /etc/pound/
+    volumes:
+      - type: bind
+        source: ${PWD}/conf.d/
+        target: /etc/pound/
